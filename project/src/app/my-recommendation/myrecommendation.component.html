@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<section class="row">    
+        <!-- <mat-card class="noteCardContainer" *ngFor= "let bk of arr2" >
+                <mat-card-content>{{bk.bookId}}</mat-card-content>
+                <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+                <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+                <mat-card-content *ngFor="let b of bk.author">
+                        {{b}}
+                    </mat-card-content>
+               
+                <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+                <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+                <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+                <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+               
+                <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+                <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+                <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+                <button type="submit"   mat-button class="btn2" (click)="unrecommend(bk.bookId)">Un-Recommended</button><br/>
+                 
+         </mat-card> -->
+
+         <div class="jumbotron">
+                <h1 style="margin: 15px; padding: 30px; font-size: 30px; color: white; background-color: #4A2506; font-weight: 500px; border-radius: 10px;">Favourite Section</h1>
+                <mat-card class="noteCardContainer card" *ngFor= "let bk of arr2"  >
+                    <div class="row">
+                        <div class="col-md-2">
+                            <mat-card-content ><img src="{{bk.bookImage}}"></mat-card-content>
+                            <hr>
+                            <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+                            <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+                            <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+                            <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+                            <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+                        </div>
+                        <div class="col-md-10">
+                            <mat-card-content *ngFor="let b of bk.author"> {{b}} </mat-card-content>
+                            <mat-card-content><b>{{bk.bookPublisher}}</b></mat-card-content>
+                            <mat-card-content><b>{{bk.bookPublishedDate}}</b></mat-card-content>
+                            <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+                        </div>
+                    </div>
+                    <mat-card-actions>
+                        <button (click)="deleteFromFavourites(bk.id,bk.bookId,bk.username)" class="btn btn-danger button"  mat-raised-button matTooltip="Delete from faves">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+    </section>
+    <app-footer></app-footer>

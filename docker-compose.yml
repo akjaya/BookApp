@@ -1,0 +1,92 @@
+version: '3'
+services:
+#   container for mysql
+  databasemysql:
+    image: mysql:8.0.17
+    restart: always
+    ports:
+      - "3306:3306"
+    container_name: mysql-doc
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: dbuser1
+      MYSQL_PASSWORD: pass
+      MYSQL_DATABASE: testdb
+
+#    container for momgo
+  databasemongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    container_name: mongo-con
+    network_mode: host
+    environment:
+      MONGO_DATABASE: noteDb
+
+#   container for user service
+  userservice:
+      build:
+        dockerfile: Dockerfile
+        context:  ./bookAppUser
+      container_name: book-app-user-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8080:8080"
+      depends_on:
+        - databasemysql
+        
+#   container for favourite service
+  favouriteservice:
+      build: 
+        dockerfile: Dockerfile
+        context:  ./bookAppFavourite
+      container_name: book-app-favourite-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8082:8082"
+      depends_on:
+        - databasemongo
+
+#   container for recommendation service
+  recommendationservice:
+      build: 
+        dockerfile: Dockerfile
+        context:  ./bookAppRecommend
+      container_name: book-app-recommendation-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8081:8081"
+      depends_on:
+        - databasemongo
+        
+        
+#   container for comment service
+  commentservice:
+      build: 
+        dockerfile: Dockerfile
+        context:  ./bookAppComment
+      container_name: book-app-comment-docker
+      network_mode: host
+      restart: always
+      ports:
+       - "8083:8083"
+      depends_on:
+        - databasemongo
+        
+        
+# container for front end 
+  angular-frontend:
+    build:
+       dockerfile: Dockerfile
+       context:  ./project
+    container_name: angular-docker
+    network_mode: host
+    restart: always
+    ports:
+       - "8008:8008"
+    

@@ -1,0 +1,27 @@
+<div class="dialogClose">
+  <h1 mat-dialog-title> </h1>
+  
+  <div mat-dialog-content class="dialogRow">
+    
+      <div class="borderr">
+     <img src="{{data.bookImage}}"> 
+  </div>
+    &nbsp;
+    &nbsp;
+  <div class="borderr">
+      
+    <h3><b>Author(s) :</b>
+      <div *ngFor="let b of data.bookAuthors">
+        {{b}}
+      </div> </h3> <br/>
+    <!-- <h4 *ngIf="flag==true"><b>Description: </b>{{data.textSnippet}}.......<a href="login">Click Here to read more</a> </h4> <br/> -->
+    <h3><b>Description:</b>{{data.bookDescription}}</h3>
+    <h3><b>Publisher</b>: {{data.bookPublisher}}</h3> <br/>
+      <h3><b>Published Date</b>: {{data.bookPublishedDate}}</h3>
+  </div>
+  </div>
+  <div mat-dialog-actions>
+          <button mat-button [mat-dialog-close] cdkFocusInitial>Ok</button>  
+    
+  </div>
+  </div>

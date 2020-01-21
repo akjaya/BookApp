@@ -1,0 +1,11 @@
+image: maven:3.5.2-jdk-8
+stages:
+- build
+- test
+maven-build:
+ stage: build
+ script: 'mvn package'
+maven-test:
+ stage: test
+ script: 'mvn test'
+

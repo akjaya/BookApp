@@ -1,0 +1,24 @@
+<!-- <header>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+          <button mat-button  class="btn " type="submit" (click)="ViewFavourite()">View My Favorites</button>
+          &nbsp;&nbsp;
+          <button mat-button class="btn" type="submit" (click)="ViewAuthors()">View Authors</button>
+          &nbsp;&nbsp;
+          <button mat-button class="btn" type="submit" (click)="ViewRecommendedBooks()">View Recommended Books</button>
+        </form>
+      </nav>
+  </header> -->
+  <app-navbar></app-navbar>
+  <h1 class="heading"> Authors</h1>
+    <div (click) ="openDialog(bk)" class="container" *ngFor="let bk of arr1printing">
+      <div class="icon">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <span>{{ bk.author }}</span>
+        <p> {{ bk.bookTitle }} <br>
+        <!-- <button  (click) ="openDialog(bk)"><i class="fa fa-eye eye" aria-hidden="true"></i></button></p> -->
+        <!-- <button mat-raised-button (click) ="openDialog(bk)">Open</button> -->
+      </div>
+      <div class="info"></div>
+    </div>
+    <app-footer></app-footer>

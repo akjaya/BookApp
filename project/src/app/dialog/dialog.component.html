@@ -1,0 +1,28 @@
+<div class="dialogClose">
+    <h1 mat-dialog-title>Title: {{data.bookTitle}} </h1>
+   
+    <div mat-dialog-content class="dialogRow">
+      
+        <div class="borderr">
+      <!-- <img src="{{data.bookImage}}"> -->
+    </div>
+      &nbsp;
+      &nbsp;
+    <div class="borderr">
+        <img src="{{data.bookImage}}"><br>
+      <!-- <h3><b>Id</b>:{{data.bookId}} </h3> <br/> -->
+      <!-- <h3 *ngIf="flag==true;"><b>Description:</b>{{data.textSnippet}}............<a href="login">Click Here to read more</a> </h3> <br/><br><br> -->
+      <h3 ><b>Description</b>: {{data.bookDescription}} </h3> <br/><br>
+      <h3><b>Publisher</b>: {{data.bookPublisher}}</h3> <br/>
+      <h3><b>Published Date</b>: {{data.bookPublishedDate}}</h3>
+      <!-- <h3><a href="{{data.preview}}" target="_blank">Preview here</a></h3> -->
+      <!-- <button (click) ="comment(data.bookId)">Comment</button> -->
+      <!-- <iframe frameborder="0" scrolling="no" style="border:0px" src="{{data.preview}}" width=500 height=500></iframe> -->
+    </div>
+    </div>
+    <div mat-dialog-actions>
+            <button  mat-button [mat-dialog-close] cdkFocusInitial>Ok</button>  
+            <button  *ngIf="flag2==false;" (click) ="comment(data.bookId)" mat-button [mat-dialog-close] cdkFocusInitial>Comment</button> 
+      
+    </div>
+    </div>

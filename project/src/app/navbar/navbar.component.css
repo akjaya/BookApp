@@ -1,0 +1,60 @@
+img{
+    height:60px;
+    width:90px;
+    border-radius: 50%;
+    
+}
+.navbar{
+    border-bottom: 5px solid whitesmoke;
+    padding: 0px;
+    margin: 0px;
+    /* background-color: lightyellow; */
+    /* position: fixed;
+    margin-bottom: 40px;
+    overflow: hidden;
+    width: 100%; */
+    /* margin-bottom: 400px;*/
+    /* overflow: hidden;  */
+    
+}
+.nav-link
+{
+    width: 162px  !important;
+}
+.dropdown-item{
+    font-size: 20px;
+    font-family: 'Courgette', cursive;
+  }
+ul li button{
+    font-size: 19px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    margin:20px;
+    color: black;
+    width:120px;
+}
+ul li a{
+    font-size: 19px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    margin:20px;
+    color: black;
+    width:120px;
+}
+.search-filled{
+    width:200px;
+    height:30px;
+    font-size: 15px;
+    color: lightskyblue;
+}
+.btn{
+    border:1px solid lightskyblue;
+    height:30px;
+    width:80px;
+    color:lightskyblue;
+    font-size: 13px;
+}
+.btn:hover{
+    background-color: blue;
+    color:white;
+}

@@ -1,0 +1,407 @@
+
+
+<!-- <nav>
+    <div><button type="submit" mat-button class="btn" (click)="ViewFavourite()"><b>View My Favorites</b></button></div>
+    <div><button type="submit" mat-button class="btn" (click)="ViewAuthors()"><b>View Authors</b></button></div>
+    <div><button type="submit" mat-button class="btn" (click)="ViewRecommendedBooks()"><b>View Recommended Books</b></button></div>
+    
+  </nav> -->
+  <!-- <header>
+      <nav class="navbar navbar-light bg-light">
+          <form class="form-inline">
+            <button mat-button  class="btn " type="submit" (click)="ViewFavourite()">View My Favorites</button> 
+            &nbsp;&nbsp;
+            <button mat-button class="btn" type="submit" (click)="ViewAuthors()">View Authors</button>
+            &nbsp;&nbsp;
+            <button mat-button class="btn" type="submit" (click)="ViewRecommendedBooks()">View Recommended Books</button>
+            image section 
+            <img [src] = "mypic" height="50px" width="50px" alt=".." *ngIf="mypic">
+            image section ends 
+          </form>
+        </nav>
+</header> -->
+
+<!-- <button type="submit" mat-button class="btn" (click)="ViewFavourite()">View My Favorites</button>
+<button type="submit" mat-button class="btn" (click)="ViewAuthors()">View Authors</button>
+<button type="submit" mat-button class="btn" (click)="ViewRecommendedBooks()">View Recommended Books</button> -->
+<app-navbar></app-navbar>
+<div class="main">
+<section>
+ 
+  <div class="content">
+    <h1 class="heading"> Top books By Ratings </h1>
+    <div *ngFor="let bk of arr9 | paginate: { itemsPerPage: 3, currentPage: p ,id: 'p'}" class="card">
+      <div class="front">
+        <p></p>
+
+
+        <p class="bookName">
+          {{bk.key.volumeInfo.title}}
+          <br>
+
+          <br />
+          <img src="{{bk.key.volumeInfo.imageLinks.thumbnail}}" class="image">
+          <br>
+          <span class="rating">
+            <!-- {{bk.key.volumeInfo.averageRating}}&nbsp;({{bk.key.volumeInfo.ratingsCount}})-->
+            <star-rating value={{bk.key.volumeInfo.averageRating}} totalstars="5" checkedcolor="blue" uncheckedcolor="black" size="24px" readonly="false" (rate)="onRate($event)"></star-rating>
+          
+          </span> 
+        </p>
+      </div>
+      <div class="back">
+        <div>
+
+          <b>Written By:</b>
+          <p>{{bk.key.volumeInfo.authors}}</p>
+          <b>Published By:</b>
+          <p>{{bk.key.volumeInfo.publisher}}</p>
+          <b>Published On:</b>
+          <p>{{bk.key.volumeInfo.publishedDate}}</p>
+          <b>Genre(s):</b>
+          <p>{{bk.key.volumeInfo.categories}}</p>
+          <b>Language:</b>
+          <p>English</p>
+          <!-- <p>{{bk.key.volumeInfo.description}}</p> -->
+        </div>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pagination-controls (pageChange)="p = $event" id="p"></pagination-controls>
+  </div>
+
+</section>
+
+<!-- <section>
+    Top 5 books By AverageRatings
+    <mat-card class="noteCardContainer" *ngFor= "let bk of arr9" >
+            
+            <mat-card-title>{{bk.key.volumeInfo.title}}</mat-card-title>
+            <mat-card-content ><img src="{{bk.key.volumeInfo.imageLinks.thumbnail}}" class="imgage"></mat-card-content>
+            <mat-card-content *ngFor="let b of bk.key.volumeInfo.authors">
+                    {{b}}
+                </mat-card-content>
+            <mat-card-content>{{bk.key.volumeInfo.publisher}}</mat-card-content>
+            <mat-card-content>{{bk.key.volumeInfo.publishedDate}}</mat-card-content>
+            <mat-card-content>{{bk.key.volumeInfo.description}}</mat-card-content>
+            <mat-card-content>{{bk.key.volumeInfo.categories}}</mat-card-content>
+            <mat-card-content>{{bk.key.volumeInfo.averageRating}}</mat-card-content>
+            <mat-card-content>{{bk.key.volumeInfo.ratingsCount}}</mat-card-content>
+            
+            <mat-card-content>{{bk.key.volumeInfo.language}}</mat-card-content>
+            
+            
+             
+     </mat-card>
+</section> -->
+
+<section>
+  <div class="content">
+    <h1 class="heading"> Drama Books </h1>
+    <div *ngFor="let bk of arr1printing | paginate: { itemsPerPage: 3, currentPage: d ,id:'d'}" class="card">
+      <div class="front">
+        <p></p>
+
+
+        <p class="bookName">
+
+          {{bk.bookTitle}}
+          <br>
+
+          <br />
+          <img src="{{bk.bookImage}}" class="image">
+          <br>
+          <span class="rating"> {{bk.author}}</span>
+        </p>
+      </div>
+      <div class="back">
+        <div>
+
+
+          <b>Published By:</b>
+          <p>{{bk.bookPublisher}}</p>
+          <b>Published On:</b>
+          <p>{{bk.bookPublishedDate}}</p>
+          <b>Genre(s):</b>
+          <p>{{bk.bookCategory}}</p>
+          <b>Price</b>:<p>{{bk.bookCurrencytCode}}&nbsp;{{bk.bookPrice}}</p>
+          <b>Language:</b>
+          <p>{{bk.bookLanguage}}</p>
+          <!-- <p>{{bk.key.volumeInfo.description}}</p> -->
+        </div>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pagination-controls (pageChange)="d = $event" id="d"></pagination-controls>
+  </div>
+</section>
+<!-- <section> 
+Drama Books
+   
+    <mat-card class="noteCardContainer" *ngFor= "let bk of arr1printing" >
+            
+            <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+            <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+            <mat-card-content *ngFor="let b of bk.author">
+                    {{b}}
+                </mat-card-content>
+            <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+            <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+            <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+            <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+           
+            <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+            <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+            <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+            
+             
+     </mat-card>
+</section> -->
+<section>
+  <div class="content">
+    <h1 class="heading"> Fiction Books </h1>
+    <div *ngFor="let bk of arr2printing| paginate: { itemsPerPage: 3, currentPage: p1 ,id:'p1'}" class="card">
+      <div class="front">
+        <p></p>
+
+
+        <p class="bookName">
+          {{bk.bookTitle}}
+          <br>
+
+          <br />
+          <img src="{{bk.bookImage}}" class="image">
+          <br>
+          <span class="rating"> {{bk.author}}</span>
+        </p>
+      </div>
+      <div class="back">
+        <div>
+
+
+          <b>Published By:</b>
+          <p>{{bk.bookPublisher}}</p>
+          <b>Published On:</b>
+          <p>{{bk.bookPublishedDate}}</p>
+          <b>Genre(s):</b>
+          <p>{{bk.bookCategory}}</p>
+          <b>Price</b>:<p>{{bk.bookCurrencytCode}}&nbsp;{{bk.bookPrice}}</p>
+          <b>Language:</b>
+          <p>{{bk.bookLanguage}}</p>
+          <!-- <p>{{bk.key.volumeInfo.description}}</p> -->
+        </div>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pagination-controls (pageChange)="p1 = $event" id="p1"></pagination-controls>
+  </div>
+</section>
+<!-- <section>
+    Fiction books
+    <mat-card class="noteCardContainer" *ngFor= "let bk of arr2printing" >
+            
+        <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+        <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+        <mat-card-content>{{bk.bookAuthors}}</mat-card-content>
+        <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+        <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+        <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+        <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+       
+        <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+        <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+        <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+        
+         
+ </mat-card>
+</section> -->
+<section>
+  <div class="content">
+    <h1 class="heading"> Philosophy Books </h1>
+    <div *ngFor="let bk of arr3printing | paginate: { itemsPerPage: 3, currentPage: p3 ,id:'p3'}" class="card">
+      <div class="front">
+        <p></p>
+
+
+        <p class="bookName">
+          {{bk.bookTitle}}
+          <br>
+
+          <br />
+          <img src="{{bk.bookImage}}" class="image">
+          <br>
+          <span class="rating"> {{bk.author}}</span>
+        </p>
+      </div>
+      <div class="back">
+        <div>
+
+
+          <b>Published By:</b>
+          <p>{{bk.bookPublisher}}</p>
+          <b>Published On:</b>
+          <p>{{bk.bookPublishedDate}}</p>
+          <b>Genre(s):</b>
+          <p>{{bk.bookCategory}}</p>
+          <b>Price</b>:<p>{{bk.bookCurrencytCode}}&nbsp;{{bk.bookPrice}}</p>
+          <b>Language:</b>
+          <p>{{bk.bookLanguage}}</p>
+          <!-- <p>{{bk.key.volumeInfo.description}}</p> -->
+        </div>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pagination-controls (pageChange)="p3 = $event" id="p3"></pagination-controls>
+  </div>
+</section>
+<!-- <section>
+    Philosophy Books
+    <mat-card class="noteCardContainer" *ngFor= "let bk of arr3printing" >
+            
+        <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+        <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+        <mat-card-content>{{bk.bookAuthors}}</mat-card-content>
+        <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+        <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+        <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+        <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+       
+        <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+        <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+        <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+        
+         
+ </mat-card>
+</section> -->
+<section>
+  <div class="content">
+    <h1 class="heading"> Horror Books </h1>
+    <div *ngFor="let bk of arr4printing | paginate: { itemsPerPage: 3, currentPage: p4 ,id:'p4' }" class="card">
+      <div class="front">
+        <p></p>
+
+
+        <p class="bookName">
+          {{bk.bookTitle}}
+          <br>
+
+          <br />
+          <img src="{{bk.bookImage}}" class="image">
+          <br>
+          <span class="rating"> {{bk.author}}</span>
+        </p>
+      </div>
+      <div class="back">
+        <div>
+
+
+          <b>Published By:</b>
+          <p>{{bk.bookPublisher}}</p>
+          <b>Published On:</b>
+          <p>{{bk.bookPublishedDate}}</p>
+          <b>Genre(s):</b>
+          <p>{{bk.bookCategory}}</p>
+          <b>Price</b>:<p>{{bk.bookCurrencytCode}}&nbsp;{{bk.bookPrice}}</p>
+          <b>Language:</b>
+          <p>{{bk.bookLanguage}}</p>
+          <!-- <p>{{bk.key.volumeInfo.description}}</p> -->
+        </div>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pagination-controls (pageChange)="p4 = $event" id="p4"></pagination-controls>
+  </div>
+</section>
+<!-- <section>
+    
+    Horror Books
+    <mat-card class="noteCardContainer" *ngFor= "let bk of arr4printing" >
+            
+            <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+            <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+            <mat-card-content>{{bk.bookAuthors}}</mat-card-content>
+            <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+            <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+            <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+            <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+           
+            <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+            <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+            <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+            
+             
+     </mat-card>
+</section> -->
+<section>
+  <div class="content">
+    <h1 class="heading"> Thriller Books </h1>
+    <div *ngFor="let bk of arr5printing | paginate: { itemsPerPage: 3, currentPage: p5 ,id:'p5' }" class="card">
+      <div class="front">
+        <p></p>
+
+
+        <p class="bookName">
+          {{bk.bookTitle}}
+          <br>
+
+          <br />
+          <img src="{{bk.bookImage}}" class="image">
+          <br>
+          <span class="rating"> {{bk.author}}</span>
+        </p>
+      </div>
+      <div class="back">
+        <div>
+
+
+          <b>Published By:</b>
+          <p>{{bk.bookPublisher}}</p>
+          <b>Published On:</b>
+          <p>{{bk.bookPublishedDate}}</p>
+          <b>Genre(s):</b>
+          <p>{{bk.bookCategory}}</p>
+          <b>Price</b>:<p>{{bk.bookCurrencytCode}}&nbsp;{{bk.bookPrice}}</p>
+          <b>Language:</b>
+          <p>{{bk.bookLanguage}}</p>
+          <!-- <p>{{bk.key.volumeInfo.description}}</p> -->
+        </div>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <pagination-controls (pageChange)="p5 = $event" id="p5"></pagination-controls>
+  </div>
+</section>
+<!-- <section>
+    
+    Science Books
+    <mat-card class="noteCardContainer" *ngFor= "let bk of arr5printing" >
+            
+            <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+            <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+            <mat-card-content>{{bk.bookAuthors}}</mat-card-content>
+            <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+            <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+            <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+            <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+           
+            <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+            <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+            <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+            
+             
+     </mat-card>
+
+</section> -->
+</div>

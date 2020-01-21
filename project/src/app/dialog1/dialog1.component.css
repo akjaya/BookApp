@@ -1,0 +1,11 @@
+.dialogRow
+{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    /* margin: 20px; */
+}
+.borderr
+{
+    margin: 20px;
+}

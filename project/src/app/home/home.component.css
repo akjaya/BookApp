@@ -1,0 +1,152 @@
+.nav-bar{
+  position:fixed;
+  top:0;
+  z-index:10;
+  padding-left:30px;
+}
+ /* .navbar-brand img{
+   height:100px; 
+   width:200px; 
+   margin: 0;
+  
+}  */
+.nav-link{
+  font-size: 20px;
+  font-family: 'Courgette', cursive;
+  
+}
+.dropdown-item{
+  font-size: 20px;
+  font-family: 'Courgette', cursive;
+}
+ul li a{
+  margin: 0 20px;
+}
+.image{
+    height: 60vh;
+    
+}
+.carousel-caption1 h1{
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Courgette', cursive;
+  }
+  .carousel-caption1 h2{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Courgette', cursive;
+  }
+  
+  .carousel-caption1{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  
+/*  */
+@media only screen and (min-width: 600px) {
+  main, .container {
+    width: 600px;
+    padding: 0 0 50px 0;
+  }
+}
+.noteCardContainer {
+  text-align: center;
+   align-items: center;
+  width: 250px;
+  /* height: 200px; */
+  display: inline-block;
+  /* padding: 0px; */
+  background: none !important;
+background-color: none !important;  
+}
+.noteCardContainer img{
+  height: 200px;
+  width: 180px;
+  border: 2px solid gainsboro;
+  border-radius: 20px;
+ 
+}
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.content {
+  
+  
+  padding: 30px;
+  width:80%;
+  margin: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  margin-bottom: 20px;
+ 
+}
+.scrolling-wrapper::-webkit-scrollbar, .scrolling-wrapper-flexbox::-webkit-scrollbar {
+  display: none;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+box-shadow: none !important;
+}
+.jumbotron{
+  text-align: center;
+  
+  /* background-color: pink !important; */
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.button{
+  width: 180px;
+ 
+}
+h4{
+  font-size: 20px;
+  /* text-align: center; */
+  /* text-decoration: underline; */
+  margin-left: 60px;
+  font-family: 'Indie Flower', cursive;
+}
+.arrow{
+float:right;
+font-size: 20px;
+color: #17A2B8 !important;
+}
+/*  */
+.input{
+  border-radius: 30px;
+  height:50px;
+  border:none;
+ padding: 15px;
+  width: 25vw;
+  border: 2px solid green;
+  
+}
+.search{
+  border-radius: 30px;
+  height:50px;
+  background:#ffeb3b;
+  
+ 
+}
+/* footer */
+.site-footer-container {    display: -webkit-flex;    display: -ms-flexbox;    display: flex;    flex-direction: row;}
+.site-footer {    display: -webkit-flex;    display: -ms-flexbox;    display: flex;    flex-direction: row;}
+.footer-wrapper {    /* background: black; */    color:#17A2B8;  }  
+.social-container {    width: 400px;    text-align: center;}
+.social-icons {  display: flex;  flex-direction: row;  justify-content: center;  padding: 0;  list-style: none; size: 25px}
+.social-icons li {  display: inline-block;  margin: 0.45em;  position: relative;  font-size: 1.2em;}
+.social-icons i {  color: blue;  position: absolute;  top: 21px;  left: 21px;  transition: all 265ms ease-out;}
+.social-icons a {  display: inline-block;  }
+.social-icons a:before {  display: inline-block;  transform: scale(1);  content: " ";  width: 60px;  height: 60px;  border-radius: 100%;  display: block;  background: white;  transition: all 265ms ease-out;}
+.social-icons a:hover:before {  transform: scale(0);  transition: all 265ms ease-in;}
+.social-icons a:hover i {  transform: scale(2.2);  color: #B721FF;  background: blue;  -webkit-background-clip: text;  -webkit-text-fill-color: transparent;  transition: all 265ms ease-in;}
+.contact-container {    display: flex;    flex-direction: column;    align-items: center;    background: linear-gradient(-225deg, #17A2B8 0%, #17A2B8 100%), url(https://i.imgur.com/FMsN0rP.jpg);    background-size: cover;    background-repeat: no-repeat;    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);    justify-content: center;    height: 350px;  }    .contact-title {    margin-top: 40px;    margin-bottom: 40px;    color: white;    font-size: 30px;    font-weight: 400px;    height: 40px;  }    .contact-title::after {      /* background-color: blue;  */      content: '';      display: block;      height: 10px;      margin: -15px auto auto auto;      width: 145px;  }
+  .full-section .intro-body {    display: table-cell;    vertical-align: middle;}.container{    background-color: #FC8019;    margin: 50px 0px 50px 0px;
+}

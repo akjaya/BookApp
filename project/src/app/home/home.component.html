@@ -1,0 +1,207 @@
+<app-navbar></app-navbar>
+  
+            <!-- carousel section -->
+            
+            <!-- --- -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      
+                      
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item ">
+                        <img src="../../assets/c5.png" class="image w-100" alt="...">
+                        <div class="carousel-caption1 d-none d-md-block mb-5">
+                            
+                            <h1>“There is no friend </h1>
+                                <h2>as loyal as a book.”</h2>
+                                <h2>― Ernest Hemingway</h2>
+                         
+                                
+                              </div>
+                           
+                      </div>
+                      <!-- <div class="carousel-item">
+                        <img src="../../assets/car6.jpg" class="image w-100" alt="...">
+                        <div class="carousel-caption1 d-none d-md-block mb-5">
+                              <h1>I Love This Idea!</h1>
+                                    <h2>Cover Up Front Of Books And</h2>
+                                    <h2>Leave Summary</h2> 
+                                    
+                                  </div>
+                      </div> -->
+                      <div class="carousel-item active">
+                          <img src="../../assets/car1.jpg" class="image w-100" alt="...">
+                          <div class="carousel-caption1 d-none d-md-block mb-5">
+                                  <h1>“So many books, </h1>
+                                      <h2> so little time.”</h2>
+                                      <h2>― Frank Zappa</h2>
+                                      
+                                    </div>
+                        </div>
+                      
+                    </div>
+                    
+                  </div><br><br/>
+                  
+                   <!--=================================
+        Home Category Gallery
+    ===================================== -->
+    <div class="jumbotron">
+      <h1>UnSkippable Categories</h1>
+    </div>
+    <!--  -->
+    <!-- mat card1 -->
+    <h4><b><a name="latest"></a>LATEST</b></h4>
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let l of arr10printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(l)"><img src="{{l.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{t.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(l)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <div class="container1">
+        <h4><b><a name="drama"></a>DRAMA</b> </h4>
+                <div class="content">
+                   
+                <div class="scrolling-wrapper">
+                   
+              <mat-card class="noteCardContainer" *ngFor="let d of arr1printing">
+                   <mat-card-content ><button mat-button  (click) ="openDialog(d)"><img src="{{d.bookImage}}" class="imgage">
+                  </button></mat-card-content>
+                   <!-- <mat-card-content class="cont">{{d.bookTitle}}</mat-card-content> -->
+                   <!-- <mat-card-content class="cont">{{d.bookAuthors}}</mat-card-content> -->
+                    <!-- <button mat-button class="button btn-info" (click) ="openDialog(d)">Read</button> -->
+                  </mat-card>
+                </div>
+                <div class="arrow"> Swipe on for more</div>
+                  </div>
+                  
+                  
+                </div>     
+              
+      
+      <!-- -->
+    <!-- mat card1   -->
+    <h4><b><a name="fiction"></a>FICTION</b></h4>
+                  <div class="content">
+                    
+                      <div class="scrolling-wrapper">
+                  <mat-card class="noteCardContainer" *ngFor="let f of arr2printing">
+                       <mat-card-content ><button mat-button  (click) ="openDialog(f)"><img src="{{f.bookImage}}" class="imgage"></button></mat-card-content>
+                       <!-- <mat-card-content class="cont">{{f.bookTitle}}</mat-card-content> -->
+                       <!-- <button mat-button class="button btn-info" (click) ="openDialog(f)">Read</button> -->
+                      </mat-card>
+                   </div>
+                   <div class="arrow"> Swipe on for more</div>
+                   </div>
+      
+      <!--  -->
+     
+      <h4><b><a name="philosophy"></a>PHILOSOPHY</b></h4>
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let P of arr3printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(P)"><img src="{{P.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{P.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(P)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+    <!-- -->
+    <h4><b><a name="horror"></a>HORROR</b></h4>
+     
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let h of arr4printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(h)"><img src="{{h.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{h.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(h)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+    <!--  -->
+    <h4><b><a name="science"></a>SCIENCE</b></h4>
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let s of arr5printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(s)"><img src="{{s.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{s.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(s)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow">Swipe on for more</div>
+           </div>
+    <!--  -->
+    <h4><b><a name="comedy"></a>COMEDY</b></h4>
+          <div class="content">
+              
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let c of arr16printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(c)"><img src="{{c.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{c.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(c)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+    <!--  -->
+    <h4><b><a name="art"></a>ART</b></h4>
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let a of arr17printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(a)"><img src="{{a.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{a.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(a)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+    <!--  -->
+    <h4><b><a name="thriller"></a>THRILLER</b></h4>
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let t of arr15printing">
+               <mat-card-content ><button mat-button  (click) ="openDialog(t)"><img src="{{t.bookImage}}" class="imgage"></button></mat-card-content>
+               <!-- <mat-card-content class="cont">{{t.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(t)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+     <!--  -->
+     <h4><b></b><a name="rating"></a>BY RATINGS</h4>
+          <div class="content">
+             
+              <div class="scrolling-wrapper">
+          <mat-card class="noteCardContainer" *ngFor="let r of arr9">
+               <mat-card-content ><img src="{{r.key.volumeInfo.imageLinks.thumbnail}}" class="imgage"></mat-card-content>
+               <mat-card-content>
+                  <span class="rating"> Rating :
+                      {{r.key.volumeInfo.averageRating}}
+                      <star-rating value={{r.key.volumeInfo.averageRating}} totalstars="5" checkedcolor="blue" uncheckedcolor="black" size="24px" readonly="true" (rate)="onRate($event)"></star-rating>
+                    </span>        </mat-card-content>
+               <!-- <mat-card-content class="cont">{{t.bookTitle}}</mat-card-content> -->
+               <!-- <button mat-button class="button btn-info" (click) ="openDialog(r)">Read</button> -->
+              </mat-card>
+           </div>
+           <div class="arrow"> Swipe on for more</div>
+           </div>
+           <!-- Footer --> 
+    <app-footer></app-footer>

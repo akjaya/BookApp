@@ -1,0 +1,107 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"><img src="../../assets/spot.png"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="favourites"><b>Favourites</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="author"><b>Authors</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recommendations"><b>Recommendation</b></a>
+              </li>
+            
+            
+              
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <img [src] = "mypic" height="50px" width="50px" alt=".." *ngIf="mypic">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="signout">Sign Out</a>
+                <a class="dropdown-item" href="edit">Change Password</a>
+              </div>
+            </li> 
+            
+          </ul>
+          <button type="submit" class="" (click)="viewMyRecom()">ViewMyRecommendations</button>
+           <form [formGroup]="booksearch" (ngSubmit)="search()" class="form-inline my-2 my-lg-0 search-form">
+            <input  [formControl]="title" class="form-control mr-sm-2 search-filled" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="search()"> Search </button>
+          </form> 
+          <ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <img [src] = "mypic" height="50px" width="50px" alt=".." *ngIf="mypic">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="login">Sign Out</a>
+                <a class="dropdown-item" href="edit">Edit Profile</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+
+      <div class="s002">
+        <form [formGroup]="booksearch" (ngSubmit)="search()" class="search">
+          <fieldset>
+            <legend style="font-weight: 800; color: black;"><b>SEARCH BOOKS</b></legend>
+          </fieldset>
+          <div class="inner-form">
+            <div class="input-field first-wrap">
+              <div class="icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path> 
+                </svg>
+              </div>
+              <input id="search" type="text" placeholder="What are you looking for?" type="text" [formControl]="title" class="input" />
+            </div>
+            <div class="input-field fifth-wrap">
+              <button class="btn-search" type="button" type="submit">SEARCH</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script src="js/extention/choices.js"></script>
+      <script src="js/extention/flatpickr.js"></script>
+      <script>
+        flatpickr(".datepicker",
+        {});
+      </script>
+      <script>
+        const choices = new Choices('[data-trigger]',
+        {
+          searchEnabled: false,
+          itemSelectText: '',
+        });
+      </script> -->
+    
+
+
+
+
+<!-- <form [formGroup]="booksearch" (ngSubmit)="search()" class="search">
+    <input type="text" placeholder="Enter book author/title" [formControl]="title" class="input" />
+    <button type="submit" >Search</button>
+</form> -->
+<app-navbar></app-navbar>
+<div>
+    <div class="container">
+        <div class="row">
+<app-searchresults [bk]="bk" *ngFor="let bk of arr1printing "></app-searchresults>
+</div>
+</div>
+</div>
+<app-footer></app-footer>
+<!-- <button type="submit"  mat-button class="btn1" (click)="viewMyRecom()">ViewMyRecommendations</button> -->
+    <!--  | paginate:{itemsPerPage:3,currentPage:p} -->
+

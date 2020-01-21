@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<section>
+
+
+    <!-- <mat-card  *ngFor= "let bk of arr6" >
+            
+        <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+            <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+            <mat-card-content *ngFor="let b of bk.author">
+                    {{b}}
+                </mat-card-content>
+            <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+            <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+            <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+            <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+            <mat-card-content>{{bk.length}}</mat-card-content>
+            <mat-card-content>{{bk.username}}</mat-card-content>
+            <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+            <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+            <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+            
+        </mat-card> -->
+
+
+
+        <div class="jumbotron">
+            <h1 style="margin: 15px; padding: 30px; font-size: 30px; color:black; background-color: lightskyblue; font-weight: 500px; border-radius: 10px;">All Recommended Books</h1>
+            <mat-card class="noteCardContainer card" *ngFor= "let bk of arr6"  >
+                <div class="row">
+                    <div class="col-md-2">
+                        <mat-card-content ><img src="{{bk.bookImage}}"></mat-card-content>
+                        <hr>
+                        <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+                        <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+                        <mat-card-content>{{bk.bookPrice}}</mat-card-content>
+                        <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+                        <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content>
+                    </div>
+                    <div class="col-md-10">
+                        <mat-card-content *ngFor="let b of bk.author"> {{b}} </mat-card-content>
+                        <mat-card-content><b>{{bk.bookPublisher}}</b></mat-card-content>
+                        <mat-card-content><b>{{bk.bookPublishedDate}}</b></mat-card-content>
+                        <mat-card-content>{{bk.bookDescription}}</mat-card-content>
+                        <mat-card-content>{{bk.length}} Recommendations<br> By: {{bk.username}}</mat-card-content>
+
+                    </div>
+                </div>
+                
+            </mat-card>
+        </div>
+</section>
+<app-footer></app-footer>

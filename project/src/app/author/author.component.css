@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+span{
+  text-shadow: 0 1px 2px lightblue;
+}
+i {
+  text-shadow: 0 1px 2px lightblue;
+}
+.icon{
+  text-align: center;
+  background-color:  lightgrey;
+  height: 270px;
+  width: 300px;
+  transition: all .5s ease-out;
+  border-radius: 10px;
+   display: inline-block
+}
+.container {
+    font-size: 100px;
+    font-family: sans-serif;
+    height: 280px;
+    width: 320px;
+    transition: all .5s ease-out;
+    margin: 25px;
+    border-radius: 10px;
+     display:inline-flex;
+     flex-wrap: wrap;
+}
+.container:hover {
+    height: 300px;
+    width: 350px;
+}
+.container:hover .icon {
+    background-color: lightskyblue;
+    color: white;
+}
+i {
+    font-size: 30px;
+    transition: transform .55s cubic-bezier(.26,-0.01,.37,1.53);
+}
+.cardContainer:hover .info i {
+  transform: scale(0.5), translate(0, 10px);
+}
+span {
+    margin-top: 10px;
+    font-size: 14px;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: transform .55s cubic-bezier(.26,-0.01,.37,1.53);
+}
+.cardContainer:hover span {
+  transform: scale(0.5), translate(0, 10px);
+}
+.cardContainer:hover .info {
+    transform: translate(0px, 100px);
+}
+p {
+    padding: 20px;
+    margin: auto;
+    font-family: Arial;
+    font-size: 14px;
+}
+.heading {
+    width: 100%;
+    margin-left: 1rem;
+    font-weight: 900;
+    font-size: 3.000rem;
+    text-transform: uppercase;
+    letter-spacing: .1ch;
+    line-height: 1;
+    padding-bottom: .5em;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .heading:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #1A9BE6, lightpink);
+    bottom: 0;
+  }
+  .btn:hover
+  {
+    background: lightskyblue;
+        border-bottom: 5px solid #CCC9C9;
+        border-left: 5px solid #CCC9C9;
+        border-right: 5px solid #CCC9C9;
+        border-top: 5px solid #CCC9C9;
+        line-height: 30px;
+        transition: .3s;
+        border-radius: 0.3em;
+  }
+  .btn
+  {
+    font-size: 15px;
+  }
+  

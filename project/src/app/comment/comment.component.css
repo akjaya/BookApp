@@ -1,0 +1,22 @@
+.comment{
+    width: 30vw;
+    height: 20vh;
+    /* border-radius: 2px; */
+    margin: 20px;
+
+}
+.area{
+    width: 30vw;
+    height:10vh;
+}
+.noteCardContainer{
+    margin: 20px;
+    width: 15vw;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+h3{
+    margin: 20px;
+}

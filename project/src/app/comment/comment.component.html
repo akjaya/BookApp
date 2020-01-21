@@ -1,0 +1,22 @@
+
+<form *ngIf="flag==false;" [formGroup]="commentForm" (ngSubmit)="onAddComment()">
+        <div class="comment">
+          <h2><label >Comment:</label></h2>
+          <textarea  id="comments" [formControl]="comment" class="" rows="3" class="area"
+            placeholder="Write your comment..."></textarea>
+          <button mat-raised-button type="submit" class="">Post Comment</button>
+        </div>
+      </form>
+
+<section >
+<h3><b>Comments</b></h3>
+      <section class="row">    
+            <mat-card  class="noteCardContainer" *ngFor="let bk of commentArray" >
+                <mat-card-content>{{bk.username}}</mat-card-content>
+                    <mat-card-content>{{bk.usercomment}}</mat-card-content>
+                    <button *ngIf='bk.username === username' (click)="delete(bk.commentId)">Delete</button>
+                    
+                     
+             </mat-card>
+        </section>
+    </section>

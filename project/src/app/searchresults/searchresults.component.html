@@ -1,0 +1,43 @@
+<!-- <section class="row">    
+        <mat-card class="card">
+                 <mat-card-content>{{bk.bookId}}</mat-card-content> 
+                <mat-card-title>{{bk.bookTitle}}</mat-card-title>
+                <mat-card-content ><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+                <mat-card-content *ngFor="let b of bk.author">
+                        {{b}}
+                    </mat-card-content>          
+               <mat-card-content>{{bk.bookPublisher}}</mat-card-content>
+                <mat-card-content>{{bk.bookPublishedDate}}</mat-card-content>
+                <mat-card-content>{{bk.bookDescription}}</mat-card-content> 
+                <mat-card-content>{{bk.bookCategory}}</mat-card-content>
+               <mat-card-content>{{bk.bookPrice}}</mat-card-content> 
+                <mat-card-content>{{bk.bookLanguage}}</mat-card-content>
+              <mat-card-content>{{bk.bookCurrencytCode}}</mat-card-content> 
+                <i class="fa fa-heart" (click)="favourite(bk.bookId)" style="font-size:45px;color:rgba(255, 0, 0, 0.267);"></i>
+                <button type="submit"  mat-raised-button class="btn" (click)="favourite(bk.bookId)">Add to favorite</button> 
+                 <button type="submit" *ngIf="flag==true;"   mat-raised-button class="btn1" (click)="recommend(bk.bookId)">Recommended</button>
+                 <button type="submit" *ngIf="flag==false;"  mat-raised-button class="btn1" (click)="unrecommend(bk.bookId)">Un-Recommended</button><br/>
+                 <br>
+                 <button mat-raised-button (click) ="openDialog(bk)">Open</button>
+
+         </mat-card>
+         
+    </section>
+-->
+<mat-card class="noteCardContainer">
+
+        <mat-card-content><img src="{{bk.bookImage}}" class="imgage"></mat-card-content>
+        <mat-card-content class="cont"><b>Category Name : </b>{{bk.bookCategory}}</mat-card-content>
+
+        <mat-card-content class="cont">{{bk.bookPrice}}</mat-card-content>
+        <mat-card-content class="cont"> <b>Language : </b>{{bk.bookLanguage}}</mat-card-content>
+        <!-- <mat-card-content class="cont">{{bk.bookCurrencytCode}}</mat-card-content> -->
+
+        <button *ngIf="flag2==false" type="submit" mat-button (click)="favourite(bk.bookId)"><img src="https://img.icons8.com/color/48/000000/hearts.png(819 B)https://img.icons8.com/color/48/000000/hearts.png
+"></button>
+        <button type="submit"   *ngIf="flag==true && flag2==false;" mat-button class="btn1"
+                (click)="recommend(bk.bookId)">Recommend</button>
+        <button type="submit" *ngIf="flag==false && flag2==false;" mat-button class="btn1"
+                (click)="unrecommend(bk.bookId)">Un-Recommend</button><br /><br>
+        <button mat-raised-button (click)="openDialog(bk)"><i class="fa fa-eye" aria-hidden="true"></i></button>
+</mat-card>

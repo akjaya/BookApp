@@ -1,0 +1,29 @@
+
+<header>Edit</header>
+<div class="form-container form">
+    
+    <form [formGroup]="editform" (ngSubmit)="editSubmit(id)">
+    <!-- password starts -->
+        <label> Old Password : </label>
+        <input type="password" [formControl]='oldpassword' class="password" minlength="5"><br>
+        <div *ngIf="oldpassword.invalid && (oldpassword.dirty || oldpassword.touched)" class="alert alert-danger">
+            <!-- <div *ngIf="oldpassword.errors.required">Old Password is required. </div>
+            <div *ngIf="password.errors.minlength"> Password must be at least 5 characters long. </div> -->
+            Enter old password
+        </div>
+        <br>
+    <!-- password ends -->
+
+    <!-- New password starts -->
+    <label> New Password : </label>
+    <input type="password" [formControl]='newpassword' class="password" minlength="5"><br>
+    <div *ngIf="newpassword.invalid && (newpassword.dirty || newpassword.touched)" class="alert alert-danger">
+        <div *ngIf="newpassword.errors.required">New Password is required. </div>
+        <!-- <div *ngIf="password.errors.minlength"> Password must be at least 5 characters long. </div> -->
+        New Password required
+    </div>
+    <br>
+<!-- New  password ends -->
+        <button class="button align2" type="submit" [disabled]='!editform.valid' >Edit</button>
+    </form>
+</div>

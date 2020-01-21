@@ -1,0 +1,117 @@
+{
+  "register": [
+    {
+      "password": "12345",
+      "username": "jayaak",
+      "id": 1
+    },
+    {
+      "password": "12345",
+      "username": "jayaak",
+      "id": 2
+    },
+    {
+      "password": "12345",
+      "username": "jayaak",
+      "id": 3
+    },
+    {
+      "password": "12345",
+      "username": "jayaak",
+      "id": 4
+    },
+    {
+      "password": "akjaya",
+      "username": "jayaak",
+      "id": 5
+    },
+    {
+      "password": "shreya",
+      "username": "shreya",
+      "id": 6
+    },
+    {
+      "password": "shreya",
+      "username": "shreya",
+      "id": 7
+    },
+    {
+      "password": "abcde",
+      "username": "jayaak",
+      "id": 8
+    },
+    {
+      "password": "jayaak",
+      "username": "akjaya",
+      "id": 9
+    },
+    {
+      "password": "angular",
+      "username": "angular",
+      "name": "JAYA AK",
+      "image": "C:\\fakepath\\Pan Card.jpg",
+      "id": 10
+    },
+    {
+      "password": "padma",
+      "username": "padma",
+      "name": "padma",
+      "image": "C:\\fakepath\\adhaar.jpg",
+      "genre": true,
+      "id": 11
+    },
+    {
+      "password": "nishita",
+      "username": "nishita",
+      "name": "nishita",
+      "image": "C:\\fakepath\\passport photo.jpeg",
+      "genre": true,
+      "id": 12
+    },
+    {
+      "password": "nishita",
+      "username": "nishita",
+      "name": "nishita",
+      "image": "C:\\fakepath\\adhaar.jpg",
+      "genre": true,
+      "id": 13
+    },
+    {
+      "password": "akjaya",
+      "username": "jayaak",
+      "name": "jayaak",
+      "image": "C:\\fakepath\\National Apprenticeship Training Scheme (NATS).pdf",
+      "genre": true,
+      "id": 14
+    },
+    {
+      "password": "ruttul",
+      "username": "rutul",
+      "name": "rutul",
+      "image": "C:\\fakepath\\Pan Card.pdf",
+      "genre": true,
+      "id": 15
+    },
+    {
+      "password": "rutul",
+      "username": "rutul",
+      "name": "rutul",
+      "image": "C:\\fakepath\\Pan Card.jpg",
+      "genre": true,
+      "id": 16
+    }
+  ],
+  "favourites": [
+    {
+      "bookId": "dh0DAAAAYAAJ",
+      "bookTitle": "Catalog of copyright entries",
+      "bookPublishedDate": "1915",
+      "bookCategory": "American literature",
+      "bookImage": "http://books.google.com/books/content?id=dh0DAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "bookLanguage": "en",
+      "username": null,
+      "id": 1
+    }
+  ],
+  "recommendations": []
+}

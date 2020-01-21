@@ -1,0 +1,46 @@
+
+<app-navbar></app-navbar>
+
+
+
+
+
+<!-- <section class="row">    
+        <mat-card  class="noteCardContainer" >
+                <mat-card-content>{{book1.bookId}}</mat-card-content>
+                <mat-card-title>{{book1.bookTitle}}</mat-card-title>
+                <mat-card-content ><img src="{{book1.bookImage}}" class="imgage"></mat-card-content>
+                <mat-card-content *ngFor="let b of book1.author">
+                        {{b}}
+                    </mat-card-content>
+               
+                
+                <mat-card-content>{{book1.bookDescription}}</mat-card-content>
+                
+                
+                 
+         </mat-card>
+    </section> -->
+
+    <div class="jumbotron">
+        <h1 style="margin: 15px; padding: 30px; font-size: 30px; color:black; background-color: lightskyblue; font-weight: 500px; border-radius: 10px;">Book Details</h1>
+        <mat-card class="noteCardContainer card"  >
+            <div class="row">
+                <div class="col-md-2">
+                    <mat-card-content ><img src="{{book1.bookImage}}"></mat-card-content>
+                    <hr>
+                    <mat-card-title>{{book1.bookTitle}}</mat-card-title>
+                    
+
+                </div>
+                <div class="col-md-10">
+                    <mat-card-content *ngFor="let b of book1.author"> {{b}} </mat-card-content>
+                  
+                    <mat-card-content>{{book1.bookDescription}}</mat-card-content>
+                </div>
+            </div>
+            
+        </mat-card>
+    </div>
+    <app-comment></app-comment>
+    <app-footer></app-footer>

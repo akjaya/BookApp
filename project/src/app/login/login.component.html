@@ -1,0 +1,30 @@
+
+<div class="form-container form">
+    <form [formGroup]="loginform" (ngSubmit)="loginSubmit()">
+        <div class="container">
+          <h1>Login</h1>
+          <p>Please fill in the correct credentials to login</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input  type="email" [formControl]='username' placeholder="User Name" class="username" minlength="5">
+          <br/>
+              <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                  <div *ngIf="username.errors.required"> UserName is required. </div>
+                  <div *ngIf="username.errors.minlength"> UserName must be at least 5 characters long. </div>
+              </div>
+          <label for="psw"><b>Password</b></label>
+            <input type="password" [formControl]='password' placeholder="Password" class="password" minlength="5"><br>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                <div *ngIf="password.errors.required"> Password is required. </div>
+                <div *ngIf="password.errors.minlength"> Password must be at least 5 characters long. </div>
+            </div>  
+          <hr>
+          <button type="submit"   class="registerbtn">Login</button>
+        </div>
+        <div class="container signin">
+            <p> New User
+                <button (click)="register()"  class ="register"  mat-raised-button matTooltip="Register"> Register Here</button>
+            </p>
+        </div>
+      </form>
+      </div>
